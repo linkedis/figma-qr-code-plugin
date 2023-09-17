@@ -1,0 +1,23 @@
+{
+  "name": "Create QR Code",
+  "id": "your plugin id",
+  "api": "1.0.0",
+  "main": "code.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": [
+    "figma",
+    "figjam"
+  ],
+  "ui": "index.html",
+  "menu": [
+    {
+      "name": "Create QR Code",
+      "command": "create-qr"
+    }
+  ],
+  "networkAccess": {
+    "allowedDomains":  ["https://linked.is/", "https://httpbin.org/","https://proxy.cors.sh"],
+    "reasoning": ""
+  }
+}
