@@ -8,6 +8,9 @@ import './index.css'
 
 const { VITE_LINKED_IS_API_URL, VITE_LINKED_IS_API_KEY, VITE_PROXY_API_URL, VITE_PROXY_API_KEY } = import.meta.env
 
+
+console.log(VITE_LINKED_IS_API_URL, 'VITE_LINKED_IS_API_URL')
+
 interface QRCodeData {
     id: number
     name: string
@@ -82,7 +85,7 @@ const send = async (data: string) => {
     form.append('name', 'qrkodeburasi')
     form.append('text', data)
 
-    await ofetch('${VITE_PROXY_API_URL}${VITE_LINKED_IS_API_URL}', {
+    await ofetch(`${VITE_PROXY_API_URL}${VITE_LINKED_IS_API_URL}`, {
         method: 'POST',
         //@ts-ignore
         headers: {
@@ -174,5 +177,6 @@ const send = async (data: string) => {
                 <div class="title text-white text-center font-['Inter'] text-[11px] font-semibold">Create QR Code</div>
             </button>
         </div>
+        
     </div>
 </template>
